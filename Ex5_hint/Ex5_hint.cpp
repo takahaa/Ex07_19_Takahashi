@@ -1,6 +1,7 @@
 ﻿#include <iostream>
 #define _USE_MATH_DEFINES
 #include <math.h>
+#include <vector>
 using namespace std;
 
 /// <summary>
@@ -58,7 +59,7 @@ public:
         return radius * radius * M_PI * height;
     }
     double GetSurface() {
-        return radius * radius * M_PI * height + radius * 2 * M_PI * height;
+        return radius * radius * M_PI * 2 + radius * 2 * M_PI * height;
     }
 
 };
@@ -81,7 +82,7 @@ public:
         return radius * radius * M_PI * height / 3;
     }
     double GetSurface() {
-        return (radius * radius * M_PI + sqrt(radius * radius + height * height)) * radius * M_PI;
+        return radius * radius * M_PI + sqrt(radius * radius + height * height) * radius * M_PI;
     }
 };
 
@@ -96,7 +97,7 @@ public:
         this->radius = radius;
     }
     double GetVolume() {
-        return M_PI * radius * radius * radius * 1.3;
+        return M_PI * radius * radius * radius * (4.0 / 3);
     }
     double GetSurface() {
         return radius * radius * M_PI * 4;
