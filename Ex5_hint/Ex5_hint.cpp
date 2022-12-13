@@ -31,6 +31,15 @@ public:
         this->height = height;
         this->depth = depth;
     }
+    double GetWidth() {
+        return width;
+    }
+    double GetHeight() {
+        return height;
+    }
+    double Getdepth() {
+        return depth;
+    }
     double GetVolume() {
         return width * height * depth;
     }
@@ -55,6 +64,12 @@ public:
         this->radius = radius;
         this->height = height;
     }
+    double GetRadius() {
+        return radius;
+    }
+    double GetHeight() {
+        return height;
+    }
     double GetVolume() {
         return radius * radius * M_PI * height;
     }
@@ -78,6 +93,12 @@ public:
         this->radius = radius;
         this->height = height;
     }
+    double GetRadius() {
+        return radius;
+    }
+    double GetHeight() {
+        return height;
+    }
     double GetVolume() {
         return radius * radius * M_PI * height / 3;
     }
@@ -96,6 +117,9 @@ public:
     Sphere(double radius) { //半径
         this->radius = radius;
     }
+    double GetRadius() {
+        return radius;
+    }
     double GetVolume() {
         return M_PI * radius * radius * radius * (4.0 / 3);
     }
@@ -111,12 +135,15 @@ int main()
     Box box{ 3,5,2.5 };
     cout << "boxの体積=" << box.GetVolume() << endl;
     cout << "boxの表面積=" << box.GetSurface() << endl;
+
     Cylinder cylinder{ 2,10.2 };
     cout << "\nCylinderの体積=" << cylinder.GetVolume() << endl;
     cout << "Cylinderの表面積=" << cylinder.GetSurface() << endl;
+
     Cone cone{ 3.1,5 };
     cout << "\nConeの体積=" << cone.GetVolume() << endl;
     cout << "Coneの表面積=" << cone.GetSurface() << endl;
+
     Sphere sphere{ 3 };
     cout << "\nSphereの体積=" << sphere.GetVolume() << endl;
     cout << "Sphereの表面積=" << sphere.GetSurface() << endl;
